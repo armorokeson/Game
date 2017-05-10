@@ -47,7 +47,8 @@ public class HelloWorld {
 				  // already the default
 	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE); // the window will stay hidden
 						  // after creation
-	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE); // the window will be resiseable
+	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE); // the window will be
+						   // resizable
 
 	// Create the window
 	window = glfwCreateWindow(300, 300, "Hello World!", NULL, NULL);
@@ -100,7 +101,8 @@ public class HelloWorld {
 	// Run the rendering loop until the user has attempted to close
 	// the window or has pressed the ESCAPE key.
 	while (!glfwWindowShouldClose(window)) {
-	    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the frame buffer
+	    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the
+								// framebuffer
 
 	    glfwSwapBuffers(window); // swap the color buffers
 
