@@ -19,6 +19,7 @@ public class Main {
     private long window;
 
     public static void main(String[] args) {
+	//Running the game
 	new Main().run();
     }
 
