@@ -8,7 +8,6 @@ import static org.lwjgl.system.MemoryUtil.*;
 
 import java.nio.IntBuffer;
 
-import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
@@ -41,7 +40,7 @@ public class Main {
 						   // resizable
 
 	// Create the window
-	window = glfwCreateWindow(300, 300, "I have a small penis!", NULL, NULL);
+	window = glfwCreateWindow(1920, 1080, "Pong", NULL, NULL);
 	if (window == NULL)
 	    throw new RuntimeException("Failed to create the GLFW window");
 
@@ -91,7 +90,7 @@ public class Main {
 	GL.createCapabilities();
 
 	// Set the clear color
-	glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 	// Run the rendering loop until the user has attempted to close
 	// the window or has pressed the ESCAPE key.
@@ -108,8 +107,6 @@ public class Main {
     }
 
     public void run() {
-	System.out.println("Hello LWJGL " + Version.getVersion() + "!");
-
 	init();
 	render();
 
