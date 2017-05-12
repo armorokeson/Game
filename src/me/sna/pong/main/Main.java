@@ -13,6 +13,8 @@ import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
 
+import me.sna.pong.entities.Ball;
+
 public class Main {
 	public boolean running = true;
 
@@ -118,5 +120,14 @@ public class Main {
 		// Terminate GLFW and free the error callback
 		glfwTerminate();
 		glfwSetErrorCallback(null).free();
+		
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity(); // Resets any previous projection matrices
+		glOrtho(0, 640, 480, 0, 1, -1);
+		glMatrixMode(GL_MODELVIEW);
+		
+		Ball ball = new Ball(1.0f, 1.0f);
+		
+		ball.draw(ball.getX(), ball.getY(), 5, 360);;
 	}
 }
